@@ -1,0 +1,37 @@
+<form #vsmForm (ngSubmit)="onSubmit()">
+  <label>
+    First Name:
+    <input type="text" formControlName="name" required>
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="id">
+  </label>
+
+  <div formGroupName="address">
+    <h3>Address</h3>
+
+    <label>
+      Street:
+      <input type="text" formControlName="appsCount">
+    </label>
+
+    <label>
+      City:
+      <input type="text" formControlName="projectCode">
+    </label>
+    
+    <label>
+      State:
+      <input type="text" formControlName="projectName">
+    </label>
+
+    <label>
+      Zip Code:
+      <input type="text" formControlName="zip">
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="!vsmForm.valid">Submit</button>
+</form>
