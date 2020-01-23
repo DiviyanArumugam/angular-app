@@ -18,9 +18,6 @@ export class RegisterVsmComponent implements OnInit {
       projectCode: [''],
       projectName: [''],
     }),
-    aliases: this.fb.array([
-      this.fb.control('')
-    ])
   });
 
   constructor(private fb: FormBuilder) { }

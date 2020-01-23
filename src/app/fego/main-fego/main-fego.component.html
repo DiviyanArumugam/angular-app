@@ -1,3 +1,14 @@
-<p>
-  main-fego works!
-</p>
+<div class="mainComponent">
+  <h2>FEGO</h2>
+  <h3>Forward Engineering on the GO</h3>
+  <button class="btn" (click)="setMain()">Home</button>
+  <button class="btn" (click)="setAbout()">About</button>
+  <button class="btn" (click)="setRegister()">Register</button>
+
+  <div *ngIf="componentToShow=='main'">
+    <img src="./../../../assets/images/fego/main.png" />
+  </div>
+  <app-about-fego *ngIf="componentToShow=='about'"></app-about-fego>
+  <app-register-fego *ngIf="componentToShow=='register'"></app-register-fego>
+
+</div>

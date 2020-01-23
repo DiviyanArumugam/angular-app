@@ -4,6 +4,7 @@ import { RegisterVsmComponent } from './main-vsm/register-vsm/register-vsm.compo
 import { AboutVsmComponent } from './main-vsm/about-vsm/about-vsm.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MainVsmComponent } from './main-vsm/main-vsm.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'main', component: MainVsmComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ]
 })
 export class VsmModule { }

@@ -1,19 +1,14 @@
-<div>
-  <div>VSM</div>
-  <div>Value Stream Mapping</div>
-  <div>
+<div class="mainComponent">
+  <h2>VSM</h2>
+  <h3>Value Stream Mapping</h3>
+  <button class="btn" (click)="setMain()">Home</button>
+  <button class="btn" (click)="setAbout()">About</button>
+  <button class="btn" (click)="setRegister()">Register</button>
+
+  <div *ngIf="componentToShow=='main'">
     <img src="./../../../assets/images/vsm/main.png" />
   </div>
-
-  <a routerLink="/vsm/main" class="">
-    <button style="margin: 10px; padding: 10px; background-color: green; color: white;">Home</button>
-  </a>
-  <a routerLink="/vsm/about" class="">
-    <button style="margin: 10px; padding: 10px; background-color: green; color: white;">About</button>
-  </a>
-  <a routerLink="/vsm/register" class="">
-    <button style="margin: 10px; padding: 10px; background-color: green; color: white;">Register</button>
-  </a>
-  <!-- <router-outlet></router-outlet> -->
+  <app-about-vsm *ngIf="componentToShow=='about'"></app-about-vsm>
+  <app-register-vsm *ngIf="componentToShow=='register'"></app-register-vsm>
 
 </div>

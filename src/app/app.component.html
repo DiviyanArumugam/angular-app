@@ -1,11 +1,14 @@
-<div>
-  <div>Title</div>
-  <div>Description</div>
-  <a routerLink="/vsm/main" class="">
-    <button style="margin: 10px; padding: 10px; background-color: green; color: white;">VSM</button>
-  </a>
-  <a routerLink="/fego" class="">
-    <button style="margin: 10px; padding: 10px; background-color: green; color: white;">FEGO</button>
-  </a>
-  <router-outlet></router-outlet>
+<div class="width100pt" style="height: 65px;">
+  <div class="width50pt floatLeft">
+    <h1>CDE Products</h1>
+  </div>
+  <div class="width50pt floatLeft">
+    <a routerLink="/vsm/main" class="">
+      <button style="margin: 10px; padding: 10px; background-color: green; color: white;">VSM</button>
+    </a>
+    <a routerLink="/fego/main" class="">
+      <button style="margin: 10px; padding: 10px; background-color: green; color: white;">FEGO</button>
+    </a>
+  </div>
 </div>
+<router-outlet></router-outlet>

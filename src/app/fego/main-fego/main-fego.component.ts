@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainFegoComponent implements OnInit {
 
+  componentToShow = 'main';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  setMain() {
+    this.componentToShow = 'main';
+  }
+  setAbout() {
+    this.componentToShow = 'about';
+  }
+  setRegister() {
+    this.componentToShow = 'register';
   }
 
 }

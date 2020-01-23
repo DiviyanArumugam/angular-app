@@ -1,37 +1,74 @@
-<form #vsmForm (ngSubmit)="onSubmit()">
-  <label>
-    First Name:
-    <input type="text" formControlName="name" required>
-  </label>
+<div>
+  <h2>
+    Register for VSM
+  </h2>
+  <div class="vsmForm1">
+    <form [formGroup]="vsmForm" (ngSubmit)="onSubmit()">
+      <div class="formRow">
+        <div class="labelDiv">
+          <label>
+            Name:
+          </label>
+        </div>
+        <div class="inputDiv">
+          <input type="text" formControlName="name" required>
+        </div>
+      </div>
+      <div class="formRow">
+        <div class="labelDiv">
+          <label>
+            Associate ID:
+          </label>
+        </div>
+        <div class="inputDiv">
+          <input type="text" formControlName="id">
+        </div>
+      </div>
+      <div>
+        <div formGroupName="assessDetails">
+          <h3>Assessment Details</h3>
 
-  <label>
-    Last Name:
-    <input type="text" formControlName="id">
-  </label>
+          <div class="formRow">
+            <div class="labelDiv">
+              <label>
+                Project Code:
+              </label>
+            </div>
+            <div class="inputDiv">
+              <input type="text" formControlName="projectName">
+            </div>
+          </div>
 
-  <div formGroupName="address">
-    <h3>Address</h3>
+          <div class="formRow">
+            <div class="labelDiv">
+              <label>
+                Project Name:
+              </label>
+            </div>
+            <div class="inputDiv">
+              <input type="text" formControlName="projectCode">
+            </div>
+            <label>
+            </label>
+          </div>
 
-    <label>
-      Street:
-      <input type="text" formControlName="appsCount">
-    </label>
+          <div class="formRow">
+            <div class="labelDiv">
+              <label>
+                Apps Count:
+              </label>
+            </div>
+            <div class="inputDiv">
+              <input type="text" formControlName="appsCount">
+            </div>
+          </div>
 
-    <label>
-      City:
-      <input type="text" formControlName="projectCode">
-    </label>
-    
-    <label>
-      State:
-      <input type="text" formControlName="projectName">
-    </label>
-
-    <label>
-      Zip Code:
-      <input type="text" formControlName="zip">
-    </label>
+        </div>
+      </div>
+      <div class="buttonContainer">
+        <button class="submitButton" type="submit" [disabled]="!vsmForm.valid">Submit</button>
+      </div>
+    </form>
   </div>
 
-  <button type="submit" [disabled]="!vsmForm.valid">Submit</button>
-</form>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-register-fego',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-fego.component.css']
 })
 export class RegisterFegoComponent implements OnInit {
+
+  items = Array.from({length: 100000}).map((_, i) => `Item ${i}`);
 
   constructor() { }
 
