@@ -11,7 +11,17 @@
           </label>
         </div>
         <div class="inputDiv">
-          <input type="text" formControlName="name" required>
+          <input type="text" formControlName="name">
+        </div>
+      </div>
+      <div class="formRow">
+        <div class="labelDiv">
+          <label>
+            Email ID:
+          </label>
+        </div>
+        <div class="inputDiv">
+          <input type="text" formControlName="emailId">
         </div>
       </div>
       <div class="formRow">
@@ -68,7 +78,11 @@
       <div class="buttonContainer">
         <button class="submitButton" type="submit" [disabled]="!vsmForm.valid">Submit</button>
       </div>
+      <div>
+        <div style="color: red;" *ngIf="vsmForm.get('name').invalid">Enter Valid Name</div>
+        <div style="color: red;" *ngIf="vsmForm.get('emailId').invalid">Enter Valid Cognizant Email</div style="color: red;">
+        <div style="color: red;" *ngIf="vsmForm.get('id').invalid">Enter Valid Employee ID</div style="color: red;">
+      </div>
     </form>
   </div>
-
 </div>

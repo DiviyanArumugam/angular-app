@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-register-vsm',
@@ -11,8 +10,9 @@ import { FormArray } from '@angular/forms';
 export class RegisterVsmComponent implements OnInit {
 
   vsmForm = this.fb.group({
-    name: ['', Validators.required],
-    id: [''],
+    name: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+    emailId: ['', Validators.compose([Validators.required, Validators.pattern(/^.+@cognizant\.com$/)])],
+    id: ['', Validators.compose([Validators.required, Validators.pattern(/^\d{6}$/)])],
     assessDetails: this.fb.group({
       appsCount: [''],
       projectCode: [''],
